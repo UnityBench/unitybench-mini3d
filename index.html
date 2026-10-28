@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="UnityBench-Mini3D: evaluating LLM agents for 3D game development in Unity. 77 project-level tasks, 1,178 held-out milestone tests, seven development skills.">
+  <meta property="og:title" content="UnityBench-Mini3D">
+  <meta property="og:description" content="Evaluating LLM Agents for 3D Game Development in Unity.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/tasks/0057-golden.jpg">
+  <title>UnityBench-Mini3D | Unity China AI Hub</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="assets/benchmark-data.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="wordmark" href="#" aria-label="UnityBench home"><img src="assets/unity-logo.png" width="296" height="100" alt="Unity"><span class="wordmark-divider"></span><span>AI Hub <span class="wordmark-light">/ Research</span></span></a>
+      <nav aria-label="Main navigation"><a href="#overview">Overview</a><a href="#benchmark">Benchmark</a><a href="#results">Results</a><a href="#contributors">Contributors</a></nav>
+      <a class="nav-paper" href="https://arxiv.org/abs/2610.35980" target="_blank" rel="noopener">Read the paper <span aria-hidden="true">↗</span></a>
+      <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero container">
+      <div class="publication-band"><span>RESEARCH ARTICLE</span><span>Version 1.0</span></div>
+      <div class="publication-title">
+        <div><h1>UnityBench-Mini3D:<br><span>Evaluating LLM Agents for 3D Game Development in Unity</span></h1><p class="publication-division">AI Hub</p></div>
+        <div class="publication-identity"><img src="assets/unity-logo.png" width="296" height="100" alt="Unity"><span>Unity China</span></div>
+      </div>
+      <div class="publication-rule"></div>
+      <div class="hero-actions"><a class="button button-primary" href="https://arxiv.org/abs/2610.35980" target="_blank" rel="noopener"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 2h7l4 4v12H5zM11 2v5h5M8 11h5M8 14h5"/></svg>Read paper <span aria-hidden="true">↗</span></a><a class="button button-outline" href="https://github.com/Unity-China/UnityBench-Mini3D" target="_blank" rel="noopener"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M6 5 1 10l5 5M14 5l5 5-5 5M12 3 8 17"/></svg>Code <span aria-hidden="true">↗</span></a><a class="button button-outline" href="#benchmark">Explore benchmark <span aria-hidden="true">↓</span></a></div>
+      <div class="hero-abstract"><h2>About UnityBench-Mini3D</h2><p><strong>UnityBench-Mini3D</strong> evaluates AI agents on real Unity development workflows. It pairs 77 complete projects with natural-language requirements across seven development skills and three difficulty tiers. A total of 1,178 held-out, human-authored milestone tests check scene structure, component configuration, and runtime behavior directly in Unity.</p><a href="#overview">Research overview <span aria-hidden="true">↓</span></a></div>
+    </section>
+
+    <section class="container project-strip" aria-label="Selected golden reference projects">
+      <div class="project-strip-heading"><span>PROJECT-LEVEL UNITY DEVELOPMENT</span><span>Golden reference projects</span></div>
+      <div class="project-strip-grid">
+        <a href="#benchmark"><img src="assets/tasks/0057-golden.jpg" alt="Voxel Worms Terrain golden reference" width="640" height="360" fetchpriority="high"><span>Physics <span>0057</span></span></a>
+        <a href="#benchmark"><img src="assets/tasks/0071-golden.jpg" alt="Terrain decoration golden reference" width="640" height="360"><span>Scene construction <span>0071</span></span></a>
+        <a href="#benchmark"><img src="assets/tasks/0012-golden.jpg" alt="Animated skinned-mesh visual effects golden reference" width="640" height="360"><span>Particles &amp; shaders <span>0012</span></span></a>
+        <a href="#benchmark"><img src="assets/tasks/0062-golden.jpg" alt="UI Toolkit bubble shooter golden reference" width="640" height="360"><span>User interface <span>0062</span></span></a>
+      </div>
+    </section>
+
+    <div class="container stats-strip" aria-label="Benchmark at a glance">
+      <div><strong>77</strong><span>Project-level tasks</span></div><div><strong>1,178</strong><span>Held-out milestone tests</span></div><div><strong>7</strong><span>Development skills</span></div>
+    </div>
+
+    <section id="overview" class="section container overview-section">
+      <div class="section-label"><span>RESEARCH OVERVIEW</span><span class="section-label-line"></span></div>
+      <div class="section-heading two-column"><h2><span class="section-number">1</span> Beyond source-code correctness</h2><div class="overview-intro"><p>In game development, correctness lives across code, scene hierarchies, component settings, and runtime behavior. A project can compile and still fail to work.</p><p>UnityBench-Mini3D puts agents inside complete Unity projects, then checks their final state with human-authored tests running in the engine.</p></div></div>
+      <div class="principles"><article><span class="principle-number">01</span><h3>Projects, with context.</h3><p>Existing scenes, assets, scripts, and settings. Agents modify connected project state while preserving what already works.</p><span class="principle-note">COMPLETE UNITY PROJECTS</span></article><article><span class="principle-number">02</span><h3>Skills, beyond genres.</h3><p>Seven expert-defined categories measure the development capabilities behind a game, across three difficulty tiers.</p><span class="principle-note">EXPERT-CURATED TASKS</span></article><article><span class="principle-number">03</span><h3>Evidence, in the engine.</h3><p>Held-out EditMode and PlayMode tests verify structure and behavior, with partial credit for independently satisfied milestones.</p><span class="principle-note">DETERMINISTIC EVALUATION</span></article></div>
+      <details class="abstract-details"><summary><span>Read the abstract</span><span class="details-icon" aria-hidden="true">+</span></summary><p>Game development stresses coding agents in ways general software engineering does not: correctness depends on how engine APIs, serialized scene state, and runtime behavior interact, not on source code alone. Existing benchmarks mainly target platforms such as Godot and heavily rely on LLM judges or coarse task-level outcomes. We present UnityBench-Mini3D, a benchmark of 77 project-level Unity tasks organized around seven expert-defined skill categories rather than tutorials or genres, with three difficulty tiers. Each task pairs a complete Unity project with natural-language requirements and is evaluated using 1,178 held-out, human-authored milestone tests covering scene structure, component configuration, and runtime behavior. This in-engine evaluation provides deterministic partial credit, localizes failures, and distinguishes partial implementations from complete solutions without relying on subjective judges. Across 21 models and 9 coding harnesses, the average pass rate reaches 80.9% on easy tasks but falls to 35.2% on hard tasks, with just 57.7% overall. UnityBench-Mini3D provides a reproducible, diagnostic testbed distinguishing systems across difficulty levels.</p></details>
+    </section>
+
+    <section id="benchmark" class="benchmark-section section">
+      <div class="container">
+        <div class="section-label"><span>BENCHMARK</span><span class="section-label-line"></span><span>77 PROJECT-LEVEL TASKS</span></div>
+        <div class="section-heading heading-with-aside"><div><h2><span class="section-number">2</span> Task explorer</h2><p class="section-description">Explore the projects behind the scores. Open a task to compare its<br class="desktop-break"> initial scene and human-authored golden reference.</p></div><div class="difficulty-key"><span><i class="level-easy"></i>25 easy</span><span><i class="level-medium"></i>29 medium</span><span><i class="level-hard"></i>23 hard</span></div></div>
+        <div id="category-filters" class="filter-tabs" role="group" aria-label="Filter tasks by development skill"><button class="active" data-category="all" aria-pressed="true">All skills <span>77</span></button></div>
+        <div class="explorer-tools"><p id="task-count" role="status" aria-live="polite">Loading benchmark tasks…</p><div class="task-controls"><label class="search-box"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8" cy="8" r="5.5"/><path d="m12 12 5 5"/></svg><span class="sr-only">Search tasks</span><input type="search" id="task-search" placeholder="Search tasks…" autocomplete="off"></label><label class="sr-only" for="difficulty-filter">Task difficulty</label><select id="difficulty-filter"><option value="all">All difficulties</option><option>Easy</option><option>Medium</option><option>Hard</option></select></div></div>
+        <div id="task-grid" class="task-grid"></div>
+        <noscript><p>Enable JavaScript to explore task comparisons, or browse all tasks in the <a href="https://arxiv.org/pdf/2610.35980" target="_blank" rel="noopener">paper appendix</a>.</p></noscript>
+        <div class="load-more-wrap"><button id="load-more" class="button button-outline" hidden>Show more tasks <span aria-hidden="true">↓</span></button></div>
+        <p class="explorer-note">Screenshots show initial and golden reference projects. They are not agent-generated outputs.</p>
+      </div>
+    </section>
+
+    <section class="section container protocol-section" id="evaluation">
+      <div class="section-label"><span>EVALUATION</span><span class="section-label-line"></span></div>
+      <div class="section-heading heading-with-aside"><h2><span class="section-number">3</span> In-engine evaluation</h2><p class="section-aside">No prescribed action sequence.<br>No LLM judge.<br>Just the final project state.</p></div>
+      <div class="pipeline"><article><span class="pipeline-step">01 / INPUT</span><div class="pipeline-symbol" aria-hidden="true">{<span>+</span>}</div><h3>A project + a goal</h3><p>An initial Unity project and a specification: goal, context, constraints, and resources.</p></article><span class="pipeline-arrow" aria-hidden="true">→</span><article><span class="pipeline-step">02 / AGENT</span><div class="pipeline-symbol" aria-hidden="true">&lt;<span>/</span>&gt;</div><h3>Build, inspect, iterate</h3><p>The agent uses its harness tools to edit code, assets, and engine state within a one-hour budget.</p></article><span class="pipeline-arrow" aria-hidden="true">→</span><article><span class="pipeline-step">03 / HELD-OUT TESTS</span><div class="pipeline-symbol check-symbol" aria-hidden="true">[<span>✓</span>]</div><h3>Verify in Unity</h3><p>Clean reimport and compilation, followed by injected EditMode and PlayMode milestone tests.</p></article></div>
+    </section>
+
+    <section id="results" class="results-section section">
+      <div class="container">
+        <div class="section-label"><span>EXPERIMENTAL RESULTS</span><span class="section-label-line"></span><span>PASS@1 · ONE HOUR PER TASK</span></div>
+        <div class="section-heading heading-with-aside"><h2><span class="section-number">4</span> Benchmark results</h2><p class="section-aside">Compare milestone pass rates across skills<br>and difficulty levels, alongside cost<br>and wall-clock time.</p></div>
+        <div class="findings"><div class="finding-copy"><span class="small-label">AVERAGE MILESTONE PASS RATE</span><strong class="big-stat">57.7<span>%</span></strong><p>Overall across coding configurations.<br>Performance drops as skills must work together.</p><div class="difficulty-bars"><div><span>Easy</span><div><i style="--bar:80.85%;--bar-color:#79B5E8"></i></div><strong>80.9%</strong></div><div><span>Medium</span><div><i style="--bar:55.56%;--bar-color:#348FD9"></i></div><strong>55.6%</strong></div><div><span>Hard</span><div><i style="--bar:35.21%;--bar-color:#0A6EC8"></i></div><strong>35.2%</strong></div></div></div><div class="finding-insights evaluation-dimensions"><span class="small-label">EVALUATION DIMENSIONS</span><article><span>01</span><div><h3>Scene structure</h3><p>EditMode tests inspect scene hierarchies, object transforms, and asset references to verify that required objects are present, correctly arranged, and connected.</p></div></article><article><span>02</span><div><h3>Component configuration</h3><p>Tests check attached components, serialized properties, and resource bindings against task requirements, including settings for physics, animation, rendering, and user interfaces.</p></div></article><article><span>03</span><div><h3>Runtime behavior</h3><p>PlayMode tests run the project in Unity to verify dynamic behavior, including physical interactions, animation, and interface responses.</p></div></article></div></div>
+        <div class="leaderboard-header"><div><h3>Leaderboard</h3><p>Paper v1.0 · Table 3</p></div><div class="leaderboard-controls"><label for="result-type" class="sr-only">Harness type</label><select id="result-type"><option value="coding">Coding harnesses</option><option value="cua">Computer use agents</option><option value="all">All configurations</option></select><label for="result-harness" class="sr-only">Filter result harness</label><select id="result-harness"><option value="all">All harnesses</option></select></div></div>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Benchmark results. Scroll horizontally to view all metrics."><table class="results-table"><caption class="sr-only">Model and harness performance on UnityBench-Mini3D. Select a column to sort.</caption><thead><tr><th scope="col">#</th><th scope="col">Model / Harness</th><th scope="col" aria-sort="descending"><button data-sort="overall">Overall <span aria-hidden="true">↓</span></button></th><th scope="col"><button data-sort="easy">Easy</button></th><th scope="col"><button data-sort="medium">Medium</button></th><th scope="col"><button data-sort="hard">Hard</button></th><th scope="col"><button data-sort="cost">Cost / task</button></th><th scope="col"><button data-sort="time">Min / task</button></th></tr></thead><tbody id="results-body"></tbody></table></div>
+        <div class="results-bottom"><p id="result-count" aria-live="polite">Loading results…</p><button id="show-all-results" class="text-link">View all results <span aria-hidden="true">↓</span></button><a class="text-link" href="assets/results.json" download>Download data <span aria-hidden="true">↙</span></a></div>
+        <p class="table-note">Scores (%) are mean per-task milestone pass rates, not the percentage of fully solved projects. Cost is estimated API cost in USD; time is average wall-clock minutes. “—” indicates an unreported value. Computer use agents are evaluated separately from the 32 coding configurations.</p>
+      </div>
+    </section>
+
+    <section id="contributors" class="section container contributors-section" aria-labelledby="contributors-title">
+      <div class="section-heading"><h2 id="contributors-title"><span class="section-number">5</span> Contributors</h2></div>
+      <ul class="contributors-grid" aria-label="UnityBench-Mini3D contributors">
+        <li>Yijun Zhou<sup>1,*</sup></li>
+        <li>Minghao Shao<sup>1,2,*,†</sup></li>
+        <li>Ke Zhang<sup>1</sup></li>
+        <li>Renkai Yuan<sup>1</sup></li>
+        <li>Hongbo Yuan<sup>1</sup></li>
+        <li>Bin Hu<sup>1</sup></li>
+        <li>Bozhao Qian<sup>1</sup></li>
+        <li>Hongxia Shen<sup>1</sup></li>
+        <li>Yanhong Liu<sup>1,3</sup></li>
+        <li>Yuting Chen<sup>1</sup></li>
+        <li>Yuntao Shi<sup>1,4</sup></li>
+        <li>Zhongxuan Xu<sup>1,5</sup></li>
+        <li>Shuo Mao<sup>1</sup></li>
+        <li>Haijia Zhou<sup>1</sup></li>
+        <li>Zhendong Li<sup>1</sup></li>
+        <li>Tao Zhang<sup>1</sup></li>
+        <li>Chenggang Li<sup>1</sup></li>
+        <li>Yuxuan Wang<sup>1,6</sup></li>
+        <li>Zinan Zheng<sup>1,7</sup></li>
+        <li>Calvin Zhang<sup>1</sup></li>
+        <li>Jia Li<sup>7</sup></li>
+        <li>Heng Chang<sup>1,†</sup></li>
+        <li>Jie Feng<sup>1,†</sup></li>
+      </ul>
+      <div class="contributor-affiliations"><span><sup>1</sup> Unity China</span><span><sup>2</sup> New York University</span><span><sup>3</sup> University of Chinese Academy of Sciences</span><span><sup>4</sup> Xiamen University</span><span><sup>5</sup> Columbia University</span><span><sup>6</sup> Peking University</span><span><sup>7</sup> The Hong Kong University of Science and Technology</span></div>
+      <p class="contributor-notes">* Equal contribution. &nbsp; † Corresponding authors: <a href="mailto:shao.minghao@nyu.edu">Minghao Shao</a>, <a href="mailto:heng.chang@unity.cn">Heng Chang</a>, <a href="mailto:jie.feng@unity.cn">Jie Feng</a></p>
+    </section>
+
+    <section class="container citation-section" id="citation"><div><span class="small-label">REFERENCE</span><h2>Citation</h2><p>If you use UnityBench-Mini3D in your research,<br>please cite the paper.</p><a class="text-link" href="https://arxiv.org/abs/2610.35980" target="_blank" rel="noopener">Read the full paper <span aria-hidden="true">↗</span></a></div><div class="citation-box"><div class="citation-top"><span>BIBTEX</span><button id="copy-citation" aria-label="Copy BibTeX citation">Copy <span aria-hidden="true">⧉</span></button></div><pre id="bibtex">@misc{zhou2026unitybench,
+  title = {UnityBench-Mini3D: Evaluating LLM Agents
+    for 3D Game Development in Unity},
+  author = {Zhou, Yijun and Shao, Minghao and
+    Zhang, Ke and Yuan, Renkai and Yuan, Hongbo and
+    Hu, Bin and Qian, Bozhao and Shen, Hongxia and
+    Liu, Yanhong and Chen, Yuting and Shi, Yuntao and
+    Xu, Zhongxuan and Mao, Shuo and Zhou, Haijia and
+    Li, Zhendong and Zhang, Tao and Li, Chenggang and
+    Wang, Yuxuan and Zheng, Zinan and Zhang, Calvin and
+    Li, Jia and Chang, Heng and Feng, Jie},
+  year = {2026},
+  eprint = {2610.35980},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.SE},
+  url = {https://arxiv.org/abs/2610.35980}
+}</pre><p id="copy-status" role="status" aria-live="polite"></p></div></section>
+  </main>
+  <footer class="site-footer container"><a class="footer-brand" href="#">UnityBench-Mini3D</a><span>© 2026 Unity China · AI Hub</span><div><a href="https://arxiv.org/abs/2610.35980" target="_blank" rel="noopener">Paper ↗</a><a href="https://github.com/Unity-China/UnityBench-Mini3D" target="_blank" rel="noopener">GitHub ↗</a><a href="#">Back to top ↑</a></div></footer>
+
+  <dialog id="task-dialog" aria-labelledby="dialog-title"><div class="dialog-top"><span id="dialog-category" class="small-label"></span><button id="close-dialog" aria-label="Close task details">✕</button></div><div class="dialog-content"><div id="dialog-meta" class="task-meta"></div><h2 id="dialog-title"></h2><p id="dialog-goal"></p><div class="comparison" id="comparison"><img id="compare-golden" alt="Golden reference project" width="640" height="360"><div id="compare-initial-wrap" class="compare-initial"><img id="compare-initial" alt="Initial challenge project" width="640" height="360"></div><span class="comparison-label initial-label">INITIAL PROJECT</span><span class="comparison-label golden-label">GOLDEN REFERENCE</span><span class="comparison-divider" aria-hidden="true"><i>↔</i></span><label class="sr-only" for="compare-range">Initial and golden reference comparison. Move left to reveal the golden reference.</label><input type="range" id="compare-range" min="0" max="100" value="50" aria-label="Initial project visible percentage"></div><div class="comparison-hint"><span>← Reveal golden reference</span><span>Drag to compare →</span></div><p class="dialog-note">A visual comparison of benchmark reference projects. Milestone tests evaluate scene structure, configuration, and runtime behavior.</p><a href="https://arxiv.org/pdf/2610.35980" target="_blank" rel="noopener" class="text-link">Full specification in the paper appendix ↗</a></div></dialog>
+</body>
+</html>
